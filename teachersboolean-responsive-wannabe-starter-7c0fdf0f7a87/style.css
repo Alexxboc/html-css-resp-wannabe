@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .row {
   width: 992px;
   margin-left: auto;
@@ -69,15 +74,87 @@ img {
 }
 
 #why .row img {
-  height: 50px;
-  padding: 25px;
+  height: 100px;
+  padding: 30px;
 }
 
 .clear {
   clear: both;
 }
 
-/* Responsive rules */
+/* Responsive rules max width 768px */
+
+@media screen and (max-width: 768px) {
+  
+  img {
+    height: 150px;
+    padding-top: 10px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  .row {
+      width: 768px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: cornflowerblue;
+      margin-top: 0;
+      padding-top: 10px;
+    }
+
+  #lezioni .row>.left,
+  #lezioni .row>.right {
+      width: 100%;
+  }
+
+   .left,.right,.central,.first,.second,.third {
+      font-size: 20px;
+  }
+
+  .left, .right, .central {
+    margin-bottom: 15px;
+  }
+  
+  .row h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  hr {
+    margin-top: 10px;
+    border: 1px solid black;
+  }
+
+    #steps>.row {
+      background-color: white;
+  }
+
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    width: 100%;
+}
+
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    margin-bottom: 10px;
+}
+
+  #why .row img {
+    height: 150px;
+    padding: 30px;
+    margin-top: 15px;
+}
+
+}
+
+/* Responsive rules max width 420px*/
 
 @media screen and (max-width: 420px) {
   
@@ -87,19 +164,17 @@ img {
 
   h1 {
     font-size: 23px;
+    margin-top: 5px;
   }
 
-  .container {
-    width: auto;
-  }
-  
   .row {
-      max-width: 420px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: lightyellow;
       margin-top: 0;
+      padding-top: 5px;
     }
 
   #lezioni .row>.left,
@@ -117,6 +192,7 @@ img {
   
   .row h3 {
     margin: 0;
+    font-size: 13px;
   }
 
     #steps>.row {
@@ -129,11 +205,20 @@ img {
     width: 100%;
 }
 
+  hr {
+    border: 1px solid blck;
+  }
+
   #why .row>.first,
   #why .row>.second,
   #why .row>.third {
     margin-top: 0;
 }
 
+  #why .row img {
+    height: 85px;
+    padding: 20px;
+    margin-top: 15px;
+}
 
 }
